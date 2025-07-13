@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sd6-eC-o1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MIl-tf-7wi">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,6 +97,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="8QF-pT-0No" kind="relationship" relationship="viewControllers" id="RHG-9U-Zz7"/>
+                        <segue destination="MIl-tf-7wi" kind="relationship" relationship="viewControllers" id="zmh-Gg-j0V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKO-Ou-ADS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,8 +123,72 @@
             </objects>
             <point key="canvasLocation" x="1060" y="-27"/>
         </scene>
+        <!--369-->
+        <scene sceneID="Gjz-NS-zVO">
+            <objects>
+                <viewController id="MIl-tf-7wi" customClass="threeixnineViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLm-3X-Eag">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="최대 숫자를 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-kk-MvA">
+                                <rect key="frame" x="32" y="91" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enter:" destination="MIl-tf-7wi" eventType="editingDidEndOnExit" id="sem-Gg-WKc"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PN8-l0-5Sh">
+                                <rect key="frame" x="32" y="189" width="329" height="91"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="OS6-at-Pvz"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncs-ZT-4cK">
+                                <rect key="frame" x="32" y="288" width="329" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pYa-uT-jTo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Cz-8w-bai"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fUf-kk-MvA" firstAttribute="leading" secondItem="2Cz-8w-bai" secondAttribute="leading" constant="32" id="2Oo-fb-dTR"/>
+                            <constraint firstItem="2Cz-8w-bai" firstAttribute="trailing" secondItem="PN8-l0-5Sh" secondAttribute="trailing" constant="32" id="IAH-K0-D12"/>
+                            <constraint firstItem="Ncs-ZT-4cK" firstAttribute="leading" secondItem="2Cz-8w-bai" secondAttribute="leading" constant="32" id="KYU-JW-lwn"/>
+                            <constraint firstItem="PN8-l0-5Sh" firstAttribute="top" secondItem="fUf-kk-MvA" secondAttribute="bottom" constant="64" id="UDD-tF-NhZ"/>
+                            <constraint firstItem="PN8-l0-5Sh" firstAttribute="leading" secondItem="2Cz-8w-bai" secondAttribute="leading" constant="32" id="clc-AO-OFf"/>
+                            <constraint firstItem="2Cz-8w-bai" firstAttribute="trailing" secondItem="fUf-kk-MvA" secondAttribute="trailing" constant="32" id="cpK-gI-Lba"/>
+                            <constraint firstItem="fUf-kk-MvA" firstAttribute="top" secondItem="2Cz-8w-bai" secondAttribute="top" constant="32" id="qxV-0P-CXB"/>
+                            <constraint firstItem="2Cz-8w-bai" firstAttribute="trailing" secondItem="Ncs-ZT-4cK" secondAttribute="trailing" constant="32" id="vKp-gV-Krm"/>
+                            <constraint firstItem="Ncs-ZT-4cK" firstAttribute="top" secondItem="PN8-l0-5Sh" secondAttribute="bottom" constant="8" id="vUq-BU-zRB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="369" id="nvc-KT-p9I"/>
+                    <connections>
+                        <outlet property="label" destination="Ncs-ZT-4cK" id="ceN-B1-ZFs"/>
+                        <outlet property="textField" destination="fUf-kk-MvA" id="QBb-fY-WxW"/>
+                        <outlet property="textView" destination="PN8-l0-5Sh" id="uwa-st-ZaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQL-SO-Qzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="658.45070422535218"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
