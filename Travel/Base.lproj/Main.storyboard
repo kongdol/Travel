@@ -11,16 +11,16 @@
         <scene sceneID="gaN-ma-gtb">
             <objects>
                 <tableViewController id="RWJ-ru-53h" customClass="MagazineTableViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WyL-es-PmQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WyL-es-PmQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="431" id="kwF-Sa-Pbf" customClass="MagazineTableViewCell" customModule="Travel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="431"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="407" id="kwF-Sa-Pbf" customClass="MagazineTableViewCell" customModule="Travel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="407"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwF-Sa-Pbf" id="BYY-WL-sY2">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="431"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="407"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-nf-Yj9">
@@ -35,8 +35,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99년 99월 99일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1v-5N-EPJ">
-                                            <rect key="frame" x="213" y="399" width="130" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99년 99월 99일" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1v-5N-EPJ">
+                                            <rect key="frame" x="213" y="375" width="130" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="130" id="hHF-Pg-ULj"/>
                                             </constraints>
@@ -44,17 +44,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-sx-vQS">
-                                            <rect key="frame" x="50" y="351" width="293" height="35"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-sx-vQS">
+                                            <rect key="frame" x="50" y="350.33333333333331" width="293" height="20.333333333333314"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="y1v-5N-EPJ" firstAttribute="bottom" secondItem="BYY-WL-sY2" secondAttribute="bottomMargin" id="2Pz-7S-Jrf"/>
                                         <constraint firstItem="WNf-nf-Yj9" firstAttribute="leading" secondItem="BYY-WL-sY2" secondAttribute="leadingMargin" constant="30" id="8d2-6D-dXa"/>
                                         <constraint firstItem="2aY-sx-vQS" firstAttribute="top" secondItem="SLb-6W-BK0" secondAttribute="bottom" constant="8" id="ILO-Mx-QbG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="y1v-5N-EPJ" secondAttribute="bottom" id="ODg-CW-qnv"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="y1v-5N-EPJ" secondAttribute="trailing" constant="30" id="ca7-gN-LPx"/>
                                         <constraint firstItem="SLb-6W-BK0" firstAttribute="leading" secondItem="BYY-WL-sY2" secondAttribute="leadingMargin" constant="30" id="mn2-N9-OJr"/>
                                         <constraint firstItem="WNf-nf-Yj9" firstAttribute="top" secondItem="BYY-WL-sY2" secondAttribute="topMargin" constant="10" id="nke-5J-zXQ"/>
@@ -90,6 +90,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Sd6-eC-o1S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bro-oP-ocP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
