@@ -19,7 +19,7 @@ class threeixnineViewController: UIViewController {
         
         configure()
     }
-    //👏
+    
     @IBAction func enter(_ sender: UITextField) {
         if let number = Int(textField.text!) {
             threesixnine(number)
@@ -38,11 +38,32 @@ class threeixnineViewController: UIViewController {
     }
     
     func threesixnine(_ number: Int) {
+        var str = ""
+        let baksu = "👏"
+        var count = 0
         
+        for i in 1...number {
+            let num = String(i)
+            for j in num {
+                if j == "3" || j == "6" || j == "9" {
+                    str = str + baksu
+                    count = count + 1
+                } else {
+                    str = str + String(j)
+                }
+                
+            }
+            str = str + ", "
+        }
+        print(count)
+        
+        str.removeLast(2)
+        textView.text = str
+        result(number, count)
     }
     
     func result(_ number: Int, _ count: Int) {
-        label.text = "숫자 \(number)까지 총 박수는 \(count)번 입니다"
+        label.text = "숫자 \(number) 까지 총 박수는 \(count)번 입니다"
     }
 }
 

@@ -35,12 +35,9 @@ class TravelTableViewController: UITableViewController {
             cell.adView.clipsToBounds = true
             cell.adView.backgroundColor = backColor.randomElement()
 
-            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
-            
-            
             
             // 타이틀
             cell.travelTitle.text = ti.travel[indexPath.row].title
@@ -106,6 +103,32 @@ class TravelTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if ti.travel[indexPath.row].ad == false {
+            // 1. 스토리보드 파일찾기
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            // 2. 스토리보드 파일내 뷰컨 찾기
+            let vc = sb.instantiateViewController(identifier: "DetailTravelViewController") as! DetailTravelViewController
+            // 3. 전환
+            navigationController?.pushViewController(vc, animated: true)
+            print("광고가아닌거선택!")
+        } else {
+            // 1. 스토리보드 찾기
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            // 2. 스토리보드 파일내 뷰컨찾기
+            let vc = sb.instantiateViewController(withIdentifier: "AdViewController") as! AdViewController
+            
+            // 2-1 제목바로 present하기 위해서
+            let nav = UINavigationController(rootViewController: vc)
+            
+            nav.modalPresentationStyle = .fullScreen
+            
+            // 3. 전환
+            present(nav, animated: true)
+            print("광고입니다.")
+        }
     }
     
     
