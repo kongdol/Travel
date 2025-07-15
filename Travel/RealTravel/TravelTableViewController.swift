@@ -17,8 +17,6 @@ class TravelTableViewController: UITableViewController {
         
     }
     
-    // 셀 4번째마다 광고셀
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ti.travel.count
     }
