@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eN2-lp-HzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3973.2824427480914" y="729.57746478873241"/>
+            <point key="canvasLocation" x="4010" y="519"/>
         </scene>
         <!--Ad View Controller-->
         <scene sceneID="M8v-2m-hde">
@@ -406,12 +406,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="vi2-Q2-NSh">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="53"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g70-O2-Zo6">
+                                    <rect key="frame" x="0.0" y="11" width="377" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="전체"/>
+                                        <segment title="국내"/>
+                                        <segment title="해외"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentTapped:" destination="91A-7c-Fov" eventType="valueChanged" id="pJ1-LP-4De"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="u1m-9q-8ki">
-                                <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="u1m-9q-8ki">
+                                <rect key="frame" x="0.0" y="103" width="393" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u1m-9q-8ki" id="FPl-2p-b6S">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -422,10 +441,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="인기도시" id="lZz-Jk-P54"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="g70-O2-Zo6" id="wfc-3K-Ceo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDQ-vP-2gz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.6564885496182" y="1287.323943661972"/>
+            <point key="canvasLocation" x="1059" y="2177"/>
         </scene>
         <!--Item-->
         <scene sceneID="FY7-lS-rDe">
@@ -458,12 +480,84 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="91A-7c-Fov" kind="relationship" relationship="rootViewController" id="V3x-2v-KWP"/>
+                        <segue destination="KFg-kS-9O0" kind="relationship" relationship="rootViewController" id="Xi2-zE-9xj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGo-Mz-EA5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="267.93893129770993" y="1287.323943661972"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="yDx-mn-PgN">
+            <objects>
+                <viewController id="KFg-kS-9O0" customClass="CityViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TC8-gZ-ney">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-xa-qFs">
+                                <rect key="frame" x="16" y="146" width="361" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-AY-PD4">
+                                <rect key="frame" x="16" y="87" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-au-1vJ">
+                                <rect key="frame" x="16" y="202" width="361" height="616"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vg2-cL-Nu7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1KQ-4v-fUF"/>
+                    <connections>
+                        <outlet property="cityTableView" destination="XMV-au-1vJ" id="oLX-ea-Ca9"/>
+                        <outlet property="segement" destination="ywU-xa-qFs" id="QHL-ph-asT"/>
+                        <outlet property="textField" destination="t7g-AY-PD4" id="mzR-x6-scd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWL-Zp-w3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="1437"/>
+        </scene>
+        <!--City Detail View Controller-->
+        <scene sceneID="kJc-uF-JxB">
+            <objects>
+                <viewController storyboardIdentifier="CityDetailViewController" id="rXP-sk-1hf" customClass="CityDetailViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PLT-LX-V2F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGS-Wz-4C0">
+                                <rect key="frame" x="167" y="415.66666666666669" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xge-Sl-Fv8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CGS-Wz-4C0" firstAttribute="centerX" secondItem="PLT-LX-V2F" secondAttribute="centerX" id="74z-Zs-x4G"/>
+                            <constraint firstItem="CGS-Wz-4C0" firstAttribute="centerY" secondItem="PLT-LX-V2F" secondAttribute="centerY" id="svh-QR-w0l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityName" destination="CGS-Wz-4C0" id="jcx-FW-5sj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihl-q5-Sey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="1437"/>
         </scene>
     </scenes>
     <resources>

@@ -15,18 +15,24 @@ class DetailTravelViewController: UIViewController {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var backButton: UIButton!
     
+    var city: Travel = Travel(title: "", description: nil, travel_image: nil, grade: nil, save: nil, like: nil, ad: nil)
+    
+    var name = "고래밥"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let imgUrl = "https://images.unsplash.com/photo-1600215754990-6e7946d1e37a?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        let imgUrl = city.travel_image ?? ""
         let url = URL(string: imgUrl)
         imageView.kf.setImage(with: url)
         imageView.layer.cornerRadius = 30
         imageView.clipsToBounds = true
         
-        titleLabel.text = "카오산 로드"
-        subtitleLabel.text = "낮과 밤 서로 다른 매력을 지닌 번화한 거리"
+        titleLabel.text = city.title
+        subtitleLabel.text = city.description
         subtitleLabel.numberOfLines = 0
+        
+        
         
     }
     

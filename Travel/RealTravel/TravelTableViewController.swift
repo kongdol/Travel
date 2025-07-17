@@ -110,6 +110,7 @@ class TravelTableViewController: UITableViewController {
             // 2. 스토리보드 파일내 뷰컨 찾기
             let vc = sb.instantiateViewController(identifier: "DetailTravelViewController") as! DetailTravelViewController
             // 3. 전환
+            vc.city = ti.travel[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
             print("광고가아닌거선택!")
         } else {
@@ -117,7 +118,7 @@ class TravelTableViewController: UITableViewController {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             // 2. 스토리보드 파일내 뷰컨찾기
             let vc = sb.instantiateViewController(withIdentifier: "AdViewController") as! AdViewController
-            
+            vc.content = ti.travel[indexPath.row].title
             // 2-1 제목바로 present하기 위해서
             let nav = UINavigationController(rootViewController: vc)
             
