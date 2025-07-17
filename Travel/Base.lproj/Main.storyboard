@@ -398,6 +398,21 @@
             </objects>
             <point key="canvasLocation" x="-709" y="749"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gOB-DZ-HvI">
+            <objects>
+                <viewController id="gkR-76-Dur" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQQ-Yp-l3f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8it-4c-rs4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tny-RA-rpU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="2706"/>
+        </scene>
         <!--인기도시-->
         <scene sceneID="P7S-iz-ME6">
             <objects>
@@ -495,14 +510,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-xa-qFs">
-                                <rect key="frame" x="16" y="146" width="361" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-AY-PD4">
                                 <rect key="frame" x="16" y="87" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -514,20 +521,40 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL3-Jk-QOV">
+                                <rect key="frame" x="154" y="129" width="85" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="국내"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlf-eZ-GT7">
+                                <rect key="frame" x="292" y="129" width="85" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="해외"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-5a-Kc4">
+                                <rect key="frame" x="16" y="129" width="85" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="모두"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vg2-cL-Nu7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="1KQ-4v-fUF"/>
                     <connections>
+                        <outlet property="abroadButton" destination="hlf-eZ-GT7" id="pYK-nY-zvZ"/>
+                        <outlet property="allButton" destination="8sb-5a-Kc4" id="iXB-va-kiN"/>
                         <outlet property="cityTableView" destination="XMV-au-1vJ" id="oLX-ea-Ca9"/>
-                        <outlet property="segement" destination="ywU-xa-qFs" id="QHL-ph-asT"/>
+                        <outlet property="domesticButton" destination="xL3-Jk-QOV" id="SZf-Dw-ifO"/>
                         <outlet property="textField" destination="t7g-AY-PD4" id="mzR-x6-scd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWL-Zp-w3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="1437"/>
+            <point key="canvasLocation" x="1171.7557251908397" y="1436.6197183098593"/>
         </scene>
         <!--City Detail View Controller-->
         <scene sceneID="kJc-uF-JxB">

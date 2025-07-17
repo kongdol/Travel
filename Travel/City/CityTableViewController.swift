@@ -8,10 +8,8 @@
 import UIKit
 
 let cityInfo = CityInfo()
-
+//개선하기
 class CityTableViewController: UITableViewController {
-
-    
     @IBOutlet var segmentControl: UISegmentedControl!
     
     let identifier = CityTableViewCell.identifier
